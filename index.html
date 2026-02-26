@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defense The Tower</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🏰 Defense The Tower</h1>
+            <div class="stats">
+                <div class="stat">💰 Money: <span id="money">0</span></div>
+                <div class="stat">❤️ Health: <span id="health">100</span></div>
+                <div class="stat">🌊 Wave: <span id="wave">1</span></div>
+            </div>
+        </div>
+
+        <div class="game-board">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+
+        <div class="controls">
+            <div class="tower-selection">
+                <h3>Select Tower</h3>
+                <button class="tower-btn" data-tower="basic" data-cost="100">
+                    🔫 Basic Tower (100$)
+                </button>
+                <button class="tower-btn" data-tower="strong" data-cost="250">
+                    💥 Strong Tower (250$)
+                </button>
+                <button class="tower-btn" data-tower="fast" data-cost="150">
+                    ⚡ Fast Tower (150$)
+                </button>
+            </div>
+            <button id="startBtn" class="start-btn">Start Wave</button>
+        </div>
+
+        <div id="gameOverScreen" class="game-over-screen hidden">
+            <div class="game-over-content">
+                <h2 id="gameOverTitle">Game Over!</h2>
+                <p id="gameOverMessage">You survived 5 waves!</p>
+                <button id="restartBtn" class="start-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
